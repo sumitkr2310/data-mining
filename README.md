@@ -8,9 +8,9 @@ Like members of wineries with their own information.
 
 with the below information (not necessarily it should be in the below pattern)
 
-{ name
-  Contact no.
-  email address
+{ name,
+  Contact no.,
+  email address,
   website }
 
   
@@ -26,23 +26,32 @@ Run(without quotes) the below command in cmd prompt and wait till the installati
 
 
 Here there is an "blocks_analysis_inputs.txt" file which contains only tags with attribute and attribute value.
+
+
 This "blocks_analysis_inputs.txt" is used for extracting the Names part only. so it means if there are no Names present in the URL then put "NA" in the line.
 
 The synchronization of both the .txt files should be in their respective order.
+
 for example:
 			if there are 5 blocks there should be five lines in the blocks_analysis_inputs.txt file with their respective pattern(i.e, tag path to get the names).
 
 for example, for the URL mentioned below, we want all the names, website, contact number, and email ids:
+
 But we will access these info from the blocks0.html file(present inside the Output folder in C drive).
 
 http://granvillenychamber.com/category/all-businesses/
 
+
 The inputs in blocks_analysis_inputs.txt file should be like this(without quotes): "/article/header/h2|". this input is acting as a path to reach out to the names part inside the website. So give this path accordingly after analyzing the "blocks.html" (present in Output folder) file.
+
+
 But if path contains table tag in it then the pattern should be like this : "/table/tbody/tr|/td[2]|". Here the path before the first pipe symbol will be same as written but the path after first pipe symbol should be given according to the requirement i.e., in which "td" tag the name exists.
 
 for example:
 if the name exists at 1st "td" tag then path should be like this => /table/tbody/tr|/td[1]|
+
 if the name exists at 2nd "td" tag then path should be like this => /table/tbody/tr|/td[2]|
+
 if the name exists at 3rd "td" tag then path should be like this => /table/tbody/tr|/td[3]|
 
 NOTE : The number of lines written in the "blocks_analysis_inputs.txt" file should be equal to the number of html files present in the "Output folder".
