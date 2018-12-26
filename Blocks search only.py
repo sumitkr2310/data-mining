@@ -1,18 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
-"""
-Created on 12-Dec-2018
-
-@author: %(Shekhar joshi)s
-
-#Application : Blocks Search
- 
-#Description : Searches for the blocks in the website.
-
-#Updated    : 12-Dec-2018
-
-#Updater    : Shekhar Joshi
-"""
 
 
 
